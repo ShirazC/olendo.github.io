@@ -9,13 +9,13 @@
 
 
 ## Project Checklist
-[] research 
-[] competitive set
-[] wireframe
-[] moodboard
-[] low res mock up
-    [] art direction
-[] high res mock up
-[] export for dev
-[] setup dev environment
-[] build webapp
+-[] research 
+-[] competitive set
+-[] wireframe
+-[] moodboard
+-[] low res mock up
+&nbsp;-[] art direction
+-[] high res mock up
+-[] export for dev
+-[] setup dev environment
+-[] build webapp
