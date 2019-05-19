@@ -10,11 +10,11 @@
 
 ## Project Checklist
 - [x] research 
-- [ ] competitive set
-- [ ] wireframe
-- [ ] moodboard
-- [ ] low res mock up
-&nbsp;- [ ] art direction
+- [x] competitive set
+- [x] wireframe
+- [x] moodboard
+- [x] low res mock up
+- [x] art direction
 - [ ] high res mock up
 - [ ] export for dev
 - [ ] setup dev environment
