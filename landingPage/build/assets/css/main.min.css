@@ -199,9 +199,12 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .wrapper {
-  width: 100%;
+  width: 90%;
   max-width: 1400px;
   margin: 0 auto; }
+  @media only screen and (max-width: 1000px) {
+    .wrapper {
+      width: 85%; } }
 
 section {
   display: -webkit-box; }
@@ -344,16 +347,28 @@ hr {
   width: 100%;
   left: 0; }
 
+html, body {
+  position: relative;
+  overflow: auto; }
+
 body {
   height: 100%;
   justify-content: center;
   align-items: center;
-  overflow: auto;
-  background-color: #FAF3DD; }
+  background-color: #FAF3DD;
+  overflow-x: hidden !important; }
+
+section {
+  width: 100%;
+  overflow-x: hidden !important; }
 
 #header {
   background: url("../img/backgrounds.png") no-repeat;
   background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+    -o-background-size-width: 200%;
   height: 900px;
   color: white;
   text-align: center; }
@@ -362,18 +377,34 @@ body {
     margin: auto; }
   #header p {
     font-size: 42px; }
+  @media only screen and (max-width: 800px) {
+    #header h1 {
+      font-size: 68px !important; }
+    #header p {
+      font-size: 26px; } }
   #header h1 {
     margin-top: 160px;
     margin-bottom: -10px;
     color: white;
     font-size: 110px;
     font-weight: bold; }
+  #header li img {
+    height: 40px;
+    width: 40px; }
 
 .get_demo {
-  width: 80%;
+  width: 90%;
   margin: 100px auto;
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 800px) {
+    .get_demo .email {
+      width: 200px !important;
+      height: 65px;
+      font-size: 16px !important; }
+    .get_demo .submit {
+      width: 110px !important;
+      font-size: 16px !important; } }
   .get_demo .email {
     width: 410px;
     height: 65px;
@@ -397,12 +428,11 @@ body {
   margin-top: 20px;
   padding: 0; }
   .main-nav li {
-    list-style: none; }
+    list-style: none;
+    display: inline-block; }
   .main-nav li:first-child {
     margin-right: auto;
     padding: 10px 0; }
-    .main-nav li:first-child a {
-      padding: 0; }
   .main-nav a {
     color: white;
     padding: 10px 40px;
@@ -410,6 +440,43 @@ body {
     border-radius: 4px;
     text-decoration: none;
     font-weight: 900; }
+  .main-nav a:hover, .main-nav a:active {
+    color: #68B0AB; }
+
+li.nav-toggle {
+  display: none; }
+
+@media only screen and (max-width: 850px) {
+  .logo {
+    margin-top: -15px;
+    margin-right: -30px; }
+  li.nav-toggle {
+    display: block;
+    z-index: 100; }
+  .responsive-nav {
+    display: none; }
+  .responsive-nav.unfold {
+    display: block;
+    width: 100%;
+    background: #1f1f1f;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .responsive-nav.unfold li {
+    display: block; }
+  .responsive-nav.unfold a {
+    padding: 40px;
+    display: block;
+    text-align: center; }
+  .responsive-nav.unfold a:hover {
+    transform: translate(0);
+    color: #68B0AB; }
+  .responsive-nav.unfold a.demo {
+    background: inherit;
+    color: white;
+    margin-left: 0; }
+  .responsive-nav.unfold a.demo:hover {
+    color: #68B0AB; } }
 
 a.demo {
   background: white;
@@ -418,23 +485,34 @@ a.demo {
 
 #about {
   text-align: center;
-  height: 900px; }
+  height: 900px;
+  display: table;
+  justify-content: center;
+  width: 100%; }
   #about .cards {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-gap: 80px; }
+    @media only screen and (max-width: 1000px) {
+      #about .cards {
+        grid-template-columns: repeat(1, auto);
+        margin-bottom: 60px; } }
     #about .cards p {
       font-size: 16px; }
 
 .desc {
   width: 35%;
-  margin: auto; }
+  margin: auto;
+  text-align: center; }
   .desc h1 {
     font-size: 68px;
     margin: 100px 0 0 0; }
   .desc p {
     font-size: 26px;
     margin-bottom: 60px; }
+  @media only screen and (max-width: 1000px) {
+    .desc {
+      width: 80%; } }
 
 .about-card {
   background: white;
@@ -445,14 +523,21 @@ a.demo {
 #features {
   text-align: center;
   background-color: white;
-  height: 800px; }
+  width: 100%;
+  height: 800px;
+  display: table; }
   #features .cards {
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(6, auto);
     grid-gap: 50px; }
-    @media only screen and (max-width: 800px) {
+    @media only screen and (max-width: 1400px) {
       #features .cards {
         grid-template-columns: repeat(3, auto); } }
+    @media only screen and (max-width: 700px) {
+      #features .cards {
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 20px; } }
 
 .feature-desc {
   clear: both;
@@ -483,4 +568,4 @@ a.demo {
   background-size: cover;
   background-color: white;
   height: 550px;
-  width: 100vw; }
+  width: 100%; }

@@ -3,7 +3,8 @@
 <head>
     <title>Olendo</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1", maximum-scale=1 />
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1" /> -->
     <meta name="application-name" content="&nbsp;"/>
     <link rel="stylesheet" href="assets/css/main.min.css" />
 </head>
@@ -36,9 +37,12 @@
                 </g>
             </svg>
           </a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">FEATURES</a></li>
-          <li><a href="#" class="demo">DEMO</a></li>
+          <div id="responsive-nav" class="responsive-nav">
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">FEATURES</a></li>
+            <li><a href="#" class="demo button">DEMO</a></li>
+          </div>
+            <li class="nav-toggle"><a href="javascript:void(0);" onclick="showNav()"><img src="./assets/img/menu.svg" alt=""></a></li>
         </ul>
       </nav>
       <article class="">
